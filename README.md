@@ -9,7 +9,7 @@ $pkg install python2
 
 $pkg install git
 
-$git clone https://github.com/dgbaopro-top1/
+$git clone https://github.com/dgbaopro-top1/tools-fbhacked
 
 $cd tools-fbhacked
 
