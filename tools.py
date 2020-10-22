@@ -43,7 +43,7 @@ def mkdir(z):
 ##### LOGO #####
 logo = """
 \033[1;91m┌─────────────────────────────────────────────────────────────┐\033[1;91m
-│   ▄▄▄▄▄▄                                 By Đoàn Gia bảo                   │\033[1;91m
+│   ▄▄▄▄▄▄                      █            By Đoàn Gia bảo                   │\033[1;91m
 │   █       ▄▄▄    ▄▄▄    ▄▄▄   █▄▄▄    ▄▄▄    ▄▄▄   █   ▄    │\033[1;91m
 │   █▄▄▄▄▄ ▀   █  █▀  ▀  █▀  █  █▀ ▀█  █▀ ▀█  █▀ ▀█  █ ▄▀     │\033[1;91m
 │   █      ▄▀▀▀█  █      █▀▀▀▀  █   █  █   █  █   █  █▀█      │\033[1;91m
@@ -121,7 +121,7 @@ def login():
 		print logo
 		print('\033[1;91m[☆] \033[1;92mFACEBOOK LOGIN \033[1;91m[☆]')
 		id = raw_input('\033[1;91m[+] \033[1;36mID\033[1;97m|\033[1;96mEmail\033[1;97m \033[1;91m:\033[1;92m ')
-		pwd = getpass.getpass('\033[1;91m[+] \033[1;36mPassword \033[1;91m:\033[1;92m ')
+		pwd = getpass.getpass('\033[1;91m[+] \033[1;36mMật Khẩu \033[1;91m:\033[1;92m ')
 		load()
 		try:
 			br.open('https://m.facebook.com')
@@ -155,7 +155,7 @@ def login():
 				print"\n\033[1;91m[!] Không Có Mạng"
 				exit()
 		if 'checkpoint' in url:
-			print("\n\033[1;91m[!] \033[1;93mAccount Checkpoint")
+			print("\n\033[1;91m[!] \033[1;93mAccount Bị Xác Minh Danh Tính")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			exit()
@@ -179,7 +179,7 @@ def fbtoken():
 		pick.close()
 		menu()
 	except KeyError:
-		print "\033[1;91m[!] Wrong"
+		print "\033[1;91m[!] Lỗi"
 		e = raw_input("\033[1;91m[?] \033[1;92m Bạn Muốn Đăng Nhập?\033[1;97m[y/n]: ")
 		if e =="":
 			exit()
@@ -206,7 +206,7 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;91m[!] \033[1;93mAccount Checkpoint"
+		print"\033[1;91m[!] \033[1;93mAccount Bị Xác Minh Danh Tính"
 		os.system('rm -rf login.txt')
 		time.sleep(0.01)
 		login()
@@ -215,7 +215,7 @@ def menu():
 		exit()
 	os.system("reset")
 	print logo
-	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m Name \033[1;91m: \033[1;92m"+fb_name+"\033[1;97m"
+	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m Tên \033[1;91m: \033[1;92m"+fb_name+"\033[1;97m"
 	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m ID   \033[1;91m: \033[1;92m"+id
 	print "\033[1;97m╚"+40*"═"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Thông Tin Người Dùng"
@@ -284,7 +284,7 @@ def information():
 		login()
 	os.system('clear')
 	print logo
-	aid = raw_input('\033[1;91m[+] \033[1;92mEnter ID\033[1;97m/\033[1;92mName\033[1;91m : \033[1;97m')
+	aid = raw_input('\033[1;91m[+] \033[1;92mNhập ID\033[1;97m/\033[1;92mTên\033[1;91m : \033[1;97m')
 	mkdir('\033[1;91m[✺] \033[1;92m Đợi Vài Phút \033[1;97m...')
 	r = requests.get('https://graph.facebook.com/me/friends?access_token='+fb_token)
 	tryy = json.loads(r.text)
