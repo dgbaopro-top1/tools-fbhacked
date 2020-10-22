@@ -11,6 +11,7 @@ try:
 	import requests
 except ImportError:
 	os.system("pip2 install requests")
+	os.system("cd -")
 from requests.exceptions import ConnectionError
 from mechanize import Browser
 
@@ -249,7 +250,7 @@ def choices():
 		os.system('clear')
 		print logo
 		fb_token=open('login.txt','r').read()
-		print "\033[1;91m[+] \033[1;92mYour token\033[1;91m :\033[1;97m "+fb_token
+		print "\033[1;91m[+] \033[1;92mToken của bạn là\033[1;91m :\033[1;97m "+fb_token
 		raw_input("\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]")
 		menu()
         elif pick =="7":
