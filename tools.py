@@ -258,7 +258,7 @@ def choices():
                 print logo
                 print 40 * '\033[1;97m\xe2\x95\x90'
 		os.system('cd -')
-		os.system('rm tools-fbhacked')
+		os.system('rm -R tools-fbhacked')
                 os.system('git clone https://github.com/dgbaopro-top1/tools-fbhacked/')
                 raw_input('\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]')
                 menu()
