@@ -342,7 +342,7 @@ def dump():
 	os.system('clear')
 	print logo
 	print "\033[1;97m║--\033[1;91m> \033[1;92mERROR.\033[1;97m Lấy ID friend(Đang Fix)"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m.\033[1;97m Lấy ID friend from friend(Đang Fix)"
+	print "\033[1;97m║--\033[1;91m> \033[1;92mERROR.\033[1;97m Lấy ID friend from friend(Đang Fix)"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Lấy group member ID"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Lấy group member email"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Lấy group member phone number"
