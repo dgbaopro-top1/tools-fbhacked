@@ -218,7 +218,7 @@ def menu():
 	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m Tên \033[1;91m: \033[1;92m"+fb_name+"\033[1;97m"
 	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m ID   \033[1;91m: \033[1;92m"+id
 	print "\033[1;97m╚"+40*"═"
-	print "\033[1;97m║--\033[1;91m> \033[1;92mERROR.\033[1;97m Thông Tin Người Dùng(Đang Fix)"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Thông Tin Người Dùng"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Lấy Id/email/hp"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Hack facebook account               "
 	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Bot       "
@@ -236,7 +236,7 @@ def choices():
 	if pick =="":
 		print "\033[1;91m[!] Lỗi"
 		choices()
-	elif pick =="--":
+	elif pick =="1":
 		information()
 	elif pick =="2":
 		dump()
