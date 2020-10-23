@@ -218,7 +218,7 @@ def menu():
 	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m Tên \033[1;91m: \033[1;92m"+fb_name+"\033[1;97m"
 	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m ID   \033[1;91m: \033[1;92m"+id
 	print "\033[1;97m╚"+40*"═"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Thông Tin Người Dùng"
+	print "\033[1;97m║--\033[1;91m> \033[1;92mERROR.\033[1;97m Thông Tin Người Dùng(Đang Fix)"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Lấy Id/email/hp"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Hack facebook account               "
 	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Bot       "
@@ -236,7 +236,7 @@ def choices():
 	if pick =="":
 		print "\033[1;91m[!] Lỗi"
 		choices()
-	elif pick =="1":
+	elif pick =="--":
 		information()
 	elif pick =="2":
 		dump()
@@ -340,8 +340,8 @@ def dump():
 		login()
 	os.system('clear')
 	print logo
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Lấy ID friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Lấy ID friend from friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92mERROR.\033[1;97m Lấy ID friend(Đang Fix)"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m.\033[1;97m Lấy ID friend from friend(Đang Fix)"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Lấy group member ID"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Lấy group member email"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Lấy group member phone number"
@@ -358,9 +358,9 @@ def choose_dump():
 	if choose_from =="":
 		print "\033[1;91m[!] Lỗi"
 		choose_dump()
-	elif choose_from =="1":
+	elif choose_from =="--":
 		friends_id()
-	elif choose_from =="2":
+	elif choose_from =="--":
 		id_from_friends()
 	elif choose_from =="3":
 		id_member_group()
