@@ -257,7 +257,7 @@ def choices():
                 os.system('clear')
                 print logo
                 print 40 * '\033[1;97m\xe2\x95\x90'
-		 print "\033[1;97m║--\033[1;91m> \033[1;92m \033[1;97m Run file update ở ngoài nhé(lệnh:python2 Update.py)           "
+		 print "\033[1;97m║--\033[1;91m> \033[1;92m \033[1;97m Run file update ở ngoài nhé lệnh python2 Update.py           "
                 raw_input('\n\033[1;91m[ \033[1;97mQuay Lại \033[1;91m]')
                 menu()
 	elif pick =="8":
