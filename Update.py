@@ -1,5 +1,4 @@
-#!/usr/bin/python2
-# coding=utf-8
+#!/usr/bin/sh
 
 	os.system("rm -v tools.py")
 
